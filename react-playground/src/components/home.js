@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderBar from './App';
+import HeaderBar from './headerbar';
 
 function Home () {
     return (

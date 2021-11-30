@@ -1,3 +1,5 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/home';
 import Experience from './components/experience';
@@ -8,15 +10,15 @@ import Error from './components/error';
 function App() {
   return (
     <main>
-      <Swtich>
-        <Route path='/' component={Home} exact/>
-        <Route path='/experience' component={Experience} />
-        <Route path='/projects' component={Projects} />
-        <Route path='/contact' component={Contact} />
+      <Routes>
+        <Route path='/' element={<Home />} exact/>
+        <Route path='/experience' element={<Experience />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contact' element={<Contact />} />
         <Route component={Error} />
-      </Swtich>
+      </Routes>
     </main>
   )
 }
 
-export default HeaderBar;
+export default App;
