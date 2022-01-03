@@ -9,7 +9,6 @@ function ProjectsBody () {
                 </div>
             </div>
         </main>
-        
     )
 }
 
