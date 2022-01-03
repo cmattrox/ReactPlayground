@@ -1,39 +1,24 @@
-import { send, init }from 'emailjs-com';
-import { useState } from 'react';
+import emailjs, { init }from 'emailjs-com';
+import React, { useRef } from 'react';
 import apiKey from '../emailkey';
+import LinkedIn from '../images/LI-In-Bug.png';
+import Github from '../images/GitHub-Mark-120px-plus.png';
+import $ from 'jquery';
 import '../App.css';
+init(apiKey.USER_ID);
 
 function ContactBody() {
-    init(apiKey.USER_ID);
-    
-    const [toSend, setToSend] = useState({
-        fname: '',
-        lname: '',
-        phone: '',
-        email: '',
-        message: '',
-    });
-
-    const onSubmit = (e) => {
+    const form = useRef();
+    const sendEmail = (e) => {
         e.preventDefault();
-        send(
-            apiKey.SERVICE_ID,
-            apiKey.TEMPLATE_ID,
-            toSend,
-            apiKey.USER_ID
-        )
-        .then((response) => {
-            alert("Message sent, I will get back to you as soon as I can!");
-        })
-        .catch((err) => {
-            alert("An error occurred, please try again.", err);
-        });
+        emailjs
+            .sendForm(apiKey.SERVICE_ID, apiKey.TEMPLATE_ID, form.current, apiKey.USER_ID)
+            .then((res, err) => {
+                let frm = $("#contact-emailjs")[0];
+                frm.reset();
+                console.log(err ? err.text : res.text);
+            });
     };
-
-    const handleChange = (e) => {
-        setToSend({...toSend, [e.target.name]: e.target.value });
-    };
-
 
     return (
         <main>
@@ -41,14 +26,14 @@ function ContactBody() {
                 <div className="bg-gray-lightest w-4/5 h-full pt-5 rounded">
                     <h1 className="text-gray-darkest text-center text-7xl">Contact Me</h1>
                     <div className="border-gray-darkest border-4 rounded-lg mt-10 mx-20">
-                        <form id="contact">
+                        <form id="contact-emailjs" ref={form} onSubmit={sendEmail}>
                             <div className="pt-5 grid grid-cols-6 pr-5">
-                                <label for="fname" className="col-span-1 text-gray-darkest text-2xl pl-5">First Name: </label>
-                                <input type="text" name="fname" id="fname" className="text-gray-darkest text-2xl rounded w-full col-span-5" required/><br/>
+                                <label for="firstname" className="col-span-1 text-gray-darkest text-2xl pl-5">First Name: </label>
+                                <input type="text" name="firstname" id="fname" className="text-gray-darkest text-2xl rounded w-full col-span-5" required/><br/>
                             </div>
                             <div className="pt-5 grid grid-cols-6 pr-5">
-                                <label for="lname" className="col-span-1 text-gray-darkest text-2xl pl-5">Last Name: </label>
-                                <input type="text" name="lname" id="lname" className="text-gray-darkest text-2xl rounded w-full col-span-5" required/><br/>
+                                <label for="lastname" className="col-span-1 text-gray-darkest text-2xl pl-5">Last Name: </label>
+                                <input type="text" name="lastname" id="lname" className="text-gray-darkest text-2xl rounded w-full col-span-5" required/><br/>
                             </div>
                             <div className="pt-5 grid grid-cols-6 pr-5">
                                 <label for="phone" className="col-span-1 text-gray-darkest text-2xl pl-5">Phone: </label>
@@ -64,12 +49,17 @@ function ContactBody() {
                             </div>
                             <div className="grid justify-items-end">
                                 {/* <input type="submit" value="Submit" className="bg-gray-darker col-span-1 text-gray-lightest rounded p-2 m-5"/> */}
-                                <button className="bg-gray-darker col-span-1 text-gray-lightest rounded p-2 m-5">Submit</button>
+                                <input type="submit" value="Send Email" className="bg-gray-darker col-span-1 text-gray-lightest rounded p-2 m-5 cursor-pointer"></input>
                             </div>
                         </form>
                     </div>
+                    <div className="flex justify-center pt-5 text-gray-darkest"> 
+                        <a className="cursor-pointer" href="https://www.linkedin.com/in/welchcharles1/"><img className="h-10 w-12" src={ LinkedIn }></img></a>
+                        <a className="cursor-pointer pl-5" href="https://github.com/cmattrox"><img className="h-10 w-10" src={ Github }></img></a>
+                    </div>
                 </div>
             </div>
+            
         </main>
         
     )
