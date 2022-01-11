@@ -33,3 +33,48 @@ export const homeInfo = [
     job: '-Senior Sales Engineer at AppDynamics',
   },
 ]
+
+export const contactInfo = [
+  {
+    header: 'Contact Me',
+    formInputs: [
+      {
+        type: 'text',
+        name: 'firstname',
+        id: 'fname',
+        required: true,
+        text: 'First Name: ',
+      },
+      {
+        type: 'text',
+        name: 'lastname',
+        id: 'lname',
+        required: true,
+        text: 'Last Name: ',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        id: 'phone',
+        placeholder: 'Format: 123-456-7890',
+        pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
+        text: 'Phone: ',
+        required: false,
+      },
+      {
+        type: 'email',
+        name: 'email',
+        id: 'email',
+        required: true,
+        text: 'Email: ',
+      },
+      {
+        type: 'textarea',
+        name: 'message',
+        id: 'messge',
+        required: true,
+        text: 'Message: ',
+      },
+    ],
+  },
+]
