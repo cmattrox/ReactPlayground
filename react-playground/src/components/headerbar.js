@@ -20,7 +20,7 @@ function HeaderBar() {
           </div>
           <div className="w-1/3 divide-x-2 divide-gray-300 flex py-2 flex-row">
             <NavLink
-              to="/ReactPlayground"
+              to="/"
               className={({ isActive }) =>
                 isActive
                   ? 'underline text-gray-lightest text-center px-5 text-xl'
