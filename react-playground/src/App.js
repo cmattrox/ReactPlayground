@@ -1,11 +1,11 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import Home from './components/home'
-import Experience from './components/experience'
-import Projects from './components/projects'
-import Contact from './components/contact'
-import Error from './components/error'
+import Home from './components/Pages/Home'
+import Experience from './components/Pages/Experience'
+import Projects from './components/Pages/Projects'
+import Contact from './components/Pages/Contact'
+import Error from './components/Pages/Error'
 
 function App() {
   return (

@@ -1,6 +1,6 @@
-import '../App.css'
-import Nelson from '../images/IMG_2260.JPG'
-import { homeInfo } from '../data/data'
+import '../../App.css'
+import Nelson from '../../images/IMG_2260.JPG'
+import { homeInfo } from '../../data/data'
 
 const HomeBody = () => {
   return (

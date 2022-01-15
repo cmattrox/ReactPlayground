@@ -1,6 +1,6 @@
 import React from 'react'
-import HeaderBar from './headerbar'
-import ExperienceBody from './experiencebody'
+import HeaderBar from '../HeaderBar'
+import ExperienceBody from '../Body/ExperienceBody'
 
 function Experience() {
   return (

@@ -1,11 +1,11 @@
 import emailjs, { init } from 'emailjs-com'
 import React, { useRef } from 'react'
-import apiKey from '../emailkey'
-import LinkedIn from '../images/LI-In-Bug.png'
-import Github from '../images/GitHub-Mark-120px-plus.png'
+import apiKey from '../../emailkey'
+import LinkedIn from '../../images/LI-In-Bug.png'
+import Github from '../../images/GitHub-Mark-120px-plus.png'
 import $ from 'jquery'
-import '../App.css'
-import { contactInfo } from '../data/data'
+import '../../App.css'
+import { contactInfo } from '../../data/data'
 init(apiKey.USER_ID)
 
 function ContactBody() {

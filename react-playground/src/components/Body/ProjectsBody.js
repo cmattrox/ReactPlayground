@@ -1,6 +1,6 @@
-import '../App.css'
-import Carousel from './carousel'
-import CarouselItem from './carouselItem'
+import '../../App.css'
+import Carousel from '../Carousel'
+import CarouselItem from '../CarouselItem'
 
 function ProjectsBody() {
   return (
