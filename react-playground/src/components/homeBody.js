@@ -40,7 +40,6 @@ const HomeBody = () => {
           </div>
         </div>
       ))}
-      ß
     </main>
   )
 }

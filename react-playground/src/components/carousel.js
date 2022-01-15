@@ -36,15 +36,16 @@ const Carousel = ({ children }) => {
       className="carousel"
     >
       <div
-        className="inner"
+        className="inner pt-5"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, { width: '100%' })
         })}
       </div>
-      <div className="indicators">
+      <div className="indicators pt-2">
         <button
+          className="bg-gray-darkest text-gray-lightest px-2 rounded"
           onClick={() => {
             updateIndex(activeIndex - 1)
           }}
@@ -54,16 +55,17 @@ const Carousel = ({ children }) => {
         {React.Children.map(children, (child, index) => {
           return (
             <button
-              className={`${index === activeIndex ? 'active' : ''}`}
+              className={`${
+                index === activeIndex ? 'bg-gray-darkest' : 'bg-gray-lightest'
+              } rounded-full h-4 w-4 border-gray-darkest border-2 mx-1 mt-1`}
               onClick={() => {
                 updateIndex(index)
               }}
-            >
-              {index + 1}
-            </button>
+            ></button>
           )
         })}
         <button
+          className="bg-gray-darkest text-gray-lightest rounded px-2"
           onClick={() => {
             updateIndex(activeIndex + 1)
           }}
