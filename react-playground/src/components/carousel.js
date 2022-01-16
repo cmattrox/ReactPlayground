@@ -32,7 +32,11 @@ const Carousel = () => {
 
   return (
     <div className="h-max">
-      <div className="pt-5">
+      <div
+        className="pt-5"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         {projectInfo.map(({ title, text, technologies, img, link }, idx) => (
           <CarouselItem
             title={title}
@@ -52,7 +56,7 @@ const Carousel = () => {
         >
           Previous
         </button>
-        {projectInfo.map((index) => {
+        {projectInfo.map((item, index) => {
           return (
             <button
               className={
