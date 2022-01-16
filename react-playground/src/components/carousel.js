@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../css/carousel.css'
+import CarouselItem from './CarouselItem'
+import { projectInfo } from '../data/data'
 
 const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -15,33 +17,38 @@ const Carousel = ({ children }) => {
     setActiveIndex(newIndex)
   }
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!paused) {
-        updateIndex(activeIndex + 1)
-      }
-    }, 5000)
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (!paused) {
+  //       updateIndex(activeIndex + 1)
+  //     }
+  //   }, 5000)
 
-    return () => {
-      if (interval) {
-        clearInterval(interval)
-      }
-    }
-  })
+  //   return () => {
+  //     if (interval) {
+  //       clearInterval(interval)
+  //     }
+  //   }
+  // })
 
   return (
     <div
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      className="carousel"
+      className="carousel overflow-hidden"
     >
       <div
         className="inner pt-5"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: '100%' })
-        })}
+        {projectInfo.map(({ title, text, technologies, img }, idx) => (
+          <CarouselItem
+            title={title}
+            text={text}
+            technologies={technologies}
+            image={img}
+          />
+        ))}
       </div>
       <div className="indicators pt-2">
         <button
@@ -52,7 +59,7 @@ const Carousel = ({ children }) => {
         >
           Previous
         </button>
-        {React.Children.map(children, (child, index) => {
+        {projectInfo.map((index) => {
           return (
             <button
               className={`${

@@ -1,6 +1,5 @@
 import '../../App.css'
 import Carousel from '../Carousel'
-import CarouselItem from '../CarouselItem'
 
 function ProjectsBody() {
   return (
@@ -11,11 +10,7 @@ function ProjectsBody() {
       >
         <div className="bg-gray-lightest w-4/5 h-full pt-5 rounded">
           <h1 className="text-gray-darkest text-center text-7xl">Projects</h1>
-          <Carousel>
-            <CarouselItem>Item 1</CarouselItem>
-            <CarouselItem>Item 2</CarouselItem>
-            <CarouselItem>Item 3</CarouselItem>
-          </Carousel>
+          <Carousel />
         </div>
       </div>
     </main>

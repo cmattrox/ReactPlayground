@@ -16,7 +16,7 @@ const HomeBody = () => {
             </h1>
             <div className="pl-16 pt-10 flex flex-row grid grid-cols-3">
               <img
-                src={Nelson}
+                src={item.img}
                 alt="Picture at the Nelson"
                 className="h-60 rounded-full"
               ></img>
