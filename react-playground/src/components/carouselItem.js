@@ -1,18 +1,46 @@
 import React, { useState } from 'react'
-import '../css/carousel.css'
 
-const CarouselItem = ({ title, text, technologies, image, width }) => {
+const CarouselItem = ({
+  title,
+  text,
+  technologies,
+  image,
+  link,
+  idx,
+  activeIndex,
+}) => {
   return (
     <div
-      className="carousel-item grid grid-cols-3 bg-gray-light text-gray-darkest border-4 border-gray-darkest rounded"
-      style={{ width: width }}
+      className={
+        activeIndex !== idx
+          ? 'hidden'
+          : 'h-full bg-gray-light text-gray-darkest mx-2 border-4 border-gray-darkest rounded'
+      }
+      id={idx}
     >
-      <div className="flex m-4 col-span-1">
+      <div className="flex m-4 pb-5 border-b-2 border-gray-darkest">
         <img src={image} className="h-60 rounded" />
         <div className="pl-4">
           <h1 className="font-semibold text-4xl">{title}</h1>
           <p className="text-xl">{text}</p>
         </div>
+      </div>
+      <div className="flex flex-col text-xl ml-4 pb-2 border-b-2 border-gray-darkest m-4">
+        <ul className="list-disc list-inside">
+          Technologies Used:
+          <br />
+          {technologies.map(({ title }, idx) => (
+            <div id={idx} className="float-left">
+              <li className="px-12">{title}</li>
+            </div>
+          ))}
+        </ul>
+      </div>
+      <div className="m-4 text-xl flex">
+        <p>Link to Github:</p>
+        <a href={link} className="underline cursor-pointer pl-2">
+          {link}
+        </a>
       </div>
     </div>
   )
