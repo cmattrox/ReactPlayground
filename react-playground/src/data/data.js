@@ -198,3 +198,30 @@ export const projectInfo = [
     ],
   },
 ]
+
+export const experienceInfo = [
+  {
+    header: 'Experience',
+    experience: [
+      {
+        title: 'International Academy of Science (Full-Stack Developer):',
+        time: 'September 2021 - Current',
+        description:
+          "I do all sorts of stuff. I work a lot on the back end and front end. This job is so much fun. I hope Kathryn loves how poorly this is written. I didn't do it on purpose that's for sure. I think I am going to add a bottom border to each one of these entries.",
+      },
+      {
+        title:
+          "Metropolitan Community College (Associate's in Computer Science):",
+        time: 'January 2020 - May 2022',
+        description:
+          "I do all sorts of stuff. I work a lot on the back end and front end. This job is so much fun. I hope Kathryn loves how poorly this is written. I didn't do it on purpose that's for sure. I think I am going to add a bottom border to each one of these entries.",
+      },
+      {
+        title: 'University of Kansas (Full-Stack Bootcamp):',
+        time: 'May 2018 - October 2018',
+        description:
+          "I do all sorts of stuff. I work a lot on the back end and front end. This job is so much fun. I hope Kathryn loves how poorly this is written. I didn't do it on purpose that's for sure. I think I am going to add a bottom border to each one of these entries.",
+      },
+    ],
+  },
+]
