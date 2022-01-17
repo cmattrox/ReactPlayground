@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# A basic professional portfolio page
+
+Built with React and Tailwindcss
+
+By: Charles Welch
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
