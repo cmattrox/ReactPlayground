@@ -1,11 +1,12 @@
 import Nelson from '../images/IMG_2260.JPG'
+import Portfolio from '../images/Screen Shot 2022-01-16 at 9.07.45 PM.png'
 
 export const homeInfo = [
   {
     img: Nelson,
     header: 'Hello, World!',
     paragraph:
-      'A young full-stack developer who is also a currect computer science major enrolled in a broad spectrum of managing information systems classes. Experienced in assembly language programming and object-oriented design, with an emphasis on data structures and algorithm analysis.',
+      "I am a young, full-stack developer with experience in assimbly language programming and object oreiented design. I'm currently in my final semester as a computer science major and have studied a broad spectrum of information systems, emphasizing in data structures and algorithm analysis for front and back end programming.",
     skillsTitle: 'Certified skills: ',
     skills: [
       {
@@ -85,7 +86,7 @@ export const contactInfo = [
 export const projectInfo = [
   {
     title: 'Portfolio Website:',
-    img: Nelson,
+    img: Portfolio,
     link: 'https://github.com/cmattrox/ReactPlayground',
     text:
       "This is just some test text. I could have used lorem ipsum text but this will also work. I love my girlfriend so very much and I love being at her place where it is just the two of us. It's like we are living together, which I just can't wait to do. This is just supposed to be my portfolio page, it isn't the nicest looking but I am pretty proud of the technologies used and how it is built. I am not the most creative but I am really good at building out what needs to be done. So if you give me a design or picture and say this is what I want I will make it almost identical",

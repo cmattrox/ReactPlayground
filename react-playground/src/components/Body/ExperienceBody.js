@@ -5,7 +5,7 @@ function ExperienceBody() {
   return (
     <main>
       <div
-        className="bg-gray-darker relative w-full h-screen overflow-hidden pt-5 pb-5 flex justify-center"
+        className="bg-gray-darker relative w-full h-full overflow-hidden pt-5 pb-5 flex justify-center"
         id="body"
       >
         <div className="bg-gray-lightest w-4/5 h-full pt-5 pb-10  rounded">
