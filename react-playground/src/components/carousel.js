@@ -31,7 +31,7 @@ const Carousel = () => {
   })
 
   return (
-    <div className="h-max">
+    <div>
       <div
         className="pt-5"
         onMouseEnter={() => setPaused(true)}
@@ -64,6 +64,7 @@ const Carousel = () => {
                   ? 'rounded-full border-gray-darkest border-2 bg-gray-darkest h-4 w-4 mx-2'
                   : 'rounded-full border-gray-darkest border-2 h-4 w-4 mx-2'
               }
+              onClick={() => updateIndex(index)}
               id={index}
             ></button>
           )

@@ -30,14 +30,14 @@ function ContactBody() {
     <main>
       {contactInfo.map((item, idx) => (
         <div
-          className="bg-gray-darker relative w-full h-screen overflow-hidden pt-5 flex justify-center pb-5"
+          className="bg-gray-darker relative w-full h-full md:h-screen pt-5 flex justify-center pb-5"
           id="body"
         >
-          <div className="bg-gray-lightest w-4/5 h-full pt-5 rounded">
+          <div className="bg-gray-lightest w-4/5 h-full py-5 rounded">
             <h1 className="text-gray-darkest text-center text-7xl">
               {item.header}
             </h1>
-            <div className="border-gray-darkest border-4 rounded-lg mt-10 mx-20">
+            <div className="border-gray-darkest border-4 rounded-lg mt-10 lg:mx-20">
               <form id="contact-emailjs" ref={form} onSubmit={sendEmail}>
                 {item.formInputs.map(
                   (
@@ -48,10 +48,10 @@ function ContactBody() {
                       {required ? (
                         <>
                           {type === 'textarea' ? (
-                            <div className="grid grid-cols-6 pt-5 pb-5 h-32 pr-5">
+                            <div className="lg:grid lg:grid-cols-6 py-5 h-32 px-5">
                               <label
                                 for="message"
-                                className="col-span-1 text-gray-darkest text-2xl pl-5"
+                                className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
                               >
                                 Message:{' '}
                               </label>
@@ -59,16 +59,16 @@ function ContactBody() {
                                 type="text"
                                 name="message"
                                 id="message"
-                                className="text-gray-darkest text-2xl rounded w-full col-span-5 p-1"
+                                className="text-gray-darkest text-2xl rounded w-full lg:col-span-5 p-1"
                                 required
                               ></textarea>
                               <br />
                             </div>
                           ) : (
-                            <div className="pt-5 grid grid-cols-6 pr-5">
+                            <div className="pt-5 lg:grid lg:grid-cols-6 px-5">
                               <label
                                 for={name}
-                                className="col-span-1 text-gray-darkest text-2xl pl-5"
+                                className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
                               >
                                 {text}
                               </label>
@@ -76,7 +76,7 @@ function ContactBody() {
                                 type={type}
                                 name={name}
                                 id={id}
-                                className="text-gray-darkest pl-1 text-2xl rounded w-full col-span-5"
+                                className="text-gray-darkest pl-1 text-2xl rounded w-full lg:col-span-5"
                                 required
                               />
                               <br />
@@ -84,10 +84,10 @@ function ContactBody() {
                           )}
                         </>
                       ) : (
-                        <div className="pt-5 grid grid-cols-6 pr-5">
+                        <div className="pt-5 lg:grid lg:grid-cols-6 px-5">
                           <label
                             for={name}
-                            className="col-span-1 text-gray-darkest text-2xl pl-5"
+                            className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
                           >
                             {text}
                           </label>
@@ -95,7 +95,7 @@ function ContactBody() {
                             type={type}
                             name={name}
                             id={id}
-                            className="text-gray-darkest pl-1 text-2xl rounded w-full col-span-5"
+                            className="text-gray-darkest pl-1 text-2xl rounded w-full lg:col-span-5"
                           />
                           <br />
                         </div>

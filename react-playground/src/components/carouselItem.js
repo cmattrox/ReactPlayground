@@ -14,12 +14,12 @@ const CarouselItem = ({
       className={
         activeIndex !== idx
           ? 'hidden'
-          : 'h-full bg-gray-light text-gray-darkest mx-2 border-4 border-gray-darkest rounded'
+          : 'bg-gray-light text-gray-darkest mx-2 border-4 border-gray-darkest rounded'
       }
       id={idx}
     >
-      <div className="flex m-4 pb-5 border-b-2 border-gray-darkest">
-        <img src={image} className="h-60 rounded" />
+      <div className="lg:flex m-4 pb-5 border-b-2 border-gray-darkest">
+        <img src={image} className="h-30 md:h-60 rounded" />
         <div className="pl-4">
           <h1 className="font-semibold text-4xl">{title}</h1>
           <p className="text-xl">{text}</p>
@@ -27,7 +27,7 @@ const CarouselItem = ({
       </div>
       <div className="flex flex-col text-xl ml-4 pb-2 border-b-2 border-gray-darkest m-4">
         <ul className="list-disc list-inside">
-          Technologies Used:
+          <div className="font-semibold"> Technologies Used:</div>
           <br />
           {technologies.map(({ title }, idx) => (
             <div id={idx} className="float-left">
@@ -37,7 +37,7 @@ const CarouselItem = ({
         </ul>
       </div>
       <div className="m-4 text-xl flex">
-        <p>Link to Github:</p>
+        <p className="font-semibold">Link to Github:</p>
         <a href={link} className="underline cursor-pointer pl-2">
           {link}
         </a>

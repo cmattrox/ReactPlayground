@@ -1,5 +1,7 @@
 import Nelson from '../images/IMG_2260.JPG'
-import Portfolio from '../images/Screen Shot 2022-01-16 at 9.07.45 PM.png'
+import Portfolio from '../images/Portfolio.png'
+import Sports from '../images/Sports-Social-Media.png'
+import Lawn from '../images/4th-and-lawn.png'
 
 export const homeInfo = [
   {
@@ -87,9 +89,9 @@ export const projectInfo = [
   {
     title: 'Portfolio Website:',
     img: Portfolio,
-    link: 'https://github.com/cmattrox/ReactPlayground',
+    link: 'https://github.com/cmattrox/Portfolio',
     text:
-      "This is just some test text. I could have used lorem ipsum text but this will also work. I love my girlfriend so very much and I love being at her place where it is just the two of us. It's like we are living together, which I just can't wait to do. This is just supposed to be my portfolio page, it isn't the nicest looking but I am pretty proud of the technologies used and how it is built. I am not the most creative but I am really good at building out what needs to be done. So if you give me a design or picture and say this is what I want I will make it almost identical",
+      'This is my portfolio website, built with React and Tailwindcss. I built this platform to introduce myself, show you what I have done, and give you a place to connect with me. Everything you see here was designed by me, even this carousel! Links under my projects will take you to the respective github pages and from there you can take a look at all of my repositories to see what I have worked on over the course of my career in development. The Contact Me page uses email.js, so if you would like to know more about any of my projects, or set up a meeting, please feel free to fill out the forum!',
     technologies: [
       {
         title: 'React',
@@ -125,10 +127,10 @@ export const projectInfo = [
   },
   {
     title: '4th-and-lawn',
-    img: Nelson,
+    img: Lawn,
     link: 'https://github.com/cmattrox/4th-and-lawn',
     text:
-      "This is just some test text. I could have used lorem ipsum text but this will also work. I love my girlfriend so very much and I love being at her place where it is just the two of us. It's like we are living together, which I just can't wait to do. This is just supposed to be my portfolio page, it isn't the nicest looking but I am pretty proud of the technologies used and how it is built. I am not the most creative but I am really good at building out what needs to be done. So if you give me a design or picture and say this is what I want I will make it almost identical",
+      '4th-and-Lawn is an application I developed with several of my peers that we designed for users to be able to rent out parking spaces for events and trips to ensure you have a spot once you arrive. My main role consisted of implementing external APIs, such as Google Maps, in back-end development. I even set up an automatic confirmation email to add to the user’s experience.',
     technologies: [
       {
         title: 'React',
@@ -182,10 +184,10 @@ export const projectInfo = [
   },
   {
     title: 'Sports Social Media App',
-    img: Nelson,
+    img: Sports,
     link: 'https://github.com/cmattrox/project-2',
     text:
-      "It's like we are living together, which I just can't wait to do. This is just supposed to be my portfolio page, it isn't the nicest looking but I am pretty proud of the technologies used and how it is built. I am not the most creative but I am really good at building out what needs to be done. So if you give me a design or picture and say this is what I want I will make it almost identical",
+      'This was a group project designed to enable users to post and find times, dates, and locations for recreational pick-up games. This application has many functions, including the ability for users to create players, keep track of their games, and view other’s activities. We used Handlebars.js to build out the templates we needed, and Express.js as the backend server framework. ',
     technologies: [
       {
         title: 'Express',
@@ -226,20 +228,20 @@ export const experienceInfo = [
         title: 'International Academy of Science (Full-Stack Developer):',
         time: 'September 2021 - Current',
         description:
-          "I do all sorts of stuff. I work a lot on the back end and front end. This job is so much fun. I hope Kathryn loves how poorly this is written. I didn't do it on purpose that's for sure. I think I am going to add a bottom border to each one of these entries.",
+          "The International Academy of Science is an online, post-secondary, educational platform. on the web development team with five peers to collaborate and develop a clean, efficient, design for development projects in our que. I specialized in connecting front and back-end sources to generate essential data for pages while maintaining high standards of the industry. I primarily used HTML, CSS, JavaScript, React, PHP, and MySQL. Additionally, I facilitated a transition to React based coding to maintain the consistency of the company's websites while ensuring current projects are up-to-date and effective. ",
       },
       {
         title:
           "Metropolitan Community College (Associate's in Computer Science):",
         time: 'January 2020 - May 2022',
         description:
-          "I do all sorts of stuff. I work a lot on the back end and front end. This job is so much fun. I hope Kathryn loves how poorly this is written. I didn't do it on purpose that's for sure. I think I am going to add a bottom border to each one of these entries.",
+          'I am currently enrolled in a broad spectrum of computer science class as Metropolitan Community College. After graduating with my associate’s degree, I plan on transferring to the University of Missouri--Kansas City to pursue my bachelor’s degree in computer science. Throughout my education, my main focus has been on data structures and algorithm analysis, object oriented design, and assembly language programming. ',
       },
       {
         title: 'University of Kansas (Full-Stack Bootcamp):',
         time: 'May 2018 - October 2018',
         description:
-          "I do all sorts of stuff. I work a lot on the back end and front end. This job is so much fun. I hope Kathryn loves how poorly this is written. I didn't do it on purpose that's for sure. I think I am going to add a bottom border to each one of these entries.",
+          'During my time at Kansas University, I was part of a full-stack web development program administered by KU and Trilogy. Here, I honed my skills using HTML, CSS, and JavaScript, as well as using front-end libraries, like React. Additionally, I worked with my peers to develop several applications, such as a real estate home locator. The highlights of this bootcamp included building and maintaining MongoDB and MySQL databases, along with integrating APIs into projects for access to different databases and tools. ',
       },
     ],
   },
